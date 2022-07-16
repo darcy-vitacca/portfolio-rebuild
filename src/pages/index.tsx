@@ -11,7 +11,6 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex flex-col justify-center w-full bg-slate-600">
         <h1>Test</h1>
-        <h1>Test</h1>
       </div>
     </>
   );
