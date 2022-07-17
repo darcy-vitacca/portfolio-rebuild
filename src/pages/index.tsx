@@ -1,7 +1,14 @@
 import { useState } from 'react';
-import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import { Menu } from '@headlessui/react';
+import { MenuIcon } from '@heroicons/react/solid';
+import { DotsVerticalIcon } from '@heroicons/react/solid';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { SideMenu } from './SideMenu';
+
+function classNames(...classes: [string, string]) {
+  return classes.filter(Boolean).join(' ');
+}
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,21 +27,7 @@ const Home: NextPage = () => {
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      {isOpen && (
-        <div className="w-full lg:w-[500px] bg-gray-400 h-screen absolute inset-y-0 right-0">
-          <div className="flex justify-end w-full pt-3">
-            <XIcon
-              className="w-8 h-8 text-gray-100 cursor-pointer"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-          </div>
-          <div className="flex flex-col">
-            <p>Menu Item 1</p>
-            <p>Menu Item 2</p>
-            <p>Menu Item 3</p>
-          </div>
-        </div>
-      )}
+      {isOpen && <SideMenu />}
     </div>
   );
 };
