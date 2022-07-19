@@ -18,22 +18,24 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="flex flex-col h-24 mx-auto md:justify-end md:flex-row bg-main-600 max-w-screen lg:text-left">
-        {/* <MenuIcon
-          className="w-8 h-8 text-gray-100 cursor-pointer"
-          onClick={() => setOpen(true)}
-        /> */}{" "}
         <div className="flex items-end justify-start w-full border-r border-white"></div>
-        <div className="min-w-[250px] "></div>
+        <div className="min-w-[250px] flex justify-center items-center">
+          {" "}
+          <MenuIcon
+            className="w-12 h-12 text-gray-100 cursor-pointer"
+            onClick={() => setOpen(true)}
+          />
+        </div>
       </div>
       <div>
-        <div className="flex flex-col mx-auto border-t border-white md:justify-end md:flex-row bg-main-600 h-96 max-w-screen lg:text-left">
-          <div className="flex flex-col justify-end w-full border-r border-white">
+        <div className="flex flex-row w-full border-t border-white bg-main-600 h-96 lg:text-left">
+          <div className="flex flex-col w-full border-r border-white">
             <h1 className="mb-6 text-gray-100 text-7xl md:text-9xl">
               Darcy Vitacca.
             </h1>
             <AboutTextScroller />
           </div>
-          <div className="min-w-[250px] "></div>
+          <div className="w-[250px] "></div>
         </div>
         <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
           <div className="flex items-end justify-start w-full border-r border-black"></div>
