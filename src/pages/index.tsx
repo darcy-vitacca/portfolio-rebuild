@@ -7,6 +7,7 @@ import Head from "next/head";
 import { SideMenu } from "../components/SideMenu";
 import { AboutTextScroller } from "../components/Scroller";
 import { About } from "../components/About";
+import { AboutMe } from "../components/AboutMe";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -31,15 +32,7 @@ const Home: NextPage = () => {
       </div>
       <div>
         <About />
-        <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
-          <div className="w-full min-w-0 border-r border-black">
-            <p>
-              I’m a self taught full stack developer, with a passion for
-              creating good systems in code and life.
-            </p>
-          </div>
-          <div className="min-w-[250px] "></div>
-        </div>
+        <AboutMe />
         <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
           <div className="flex items-end justify-start w-full min-w-0 border-r border-black">
             <AboutTextScroller />

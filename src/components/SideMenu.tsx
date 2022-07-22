@@ -51,7 +51,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
                       </div>
                     </div>
                     <div>
-                      <div className="mx-6 mt-6">
+                      <div className="mx-6">
                         {menuItems?.map((item) => (
                           <Link key={item.label} href={item?.href}>
                             <div className="w-full p-2 my-3 text-3xl text-center text-white bg-black cursor-pointer md:text-6xl">
