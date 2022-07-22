@@ -1,12 +1,12 @@
-import ts from "../../public/assets/exp-icons/ts.svg";
-import js from "../../public/assets/exp-icons/js.svg";
-import react from "../../public/assets/exp-icons/react.svg";
-import node from "../../public/assets/exp-icons/node.svg";
-import next from "../../public/assets/exp-icons/next.svg";
-import graphql from "../../public/assets/exp-icons/graphql.svg";
-import mysql from "../../public/assets/exp-icons/mysql.svg";
-import psql from "../../public/assets/exp-icons/psql.svg";
-import github from "../../public/assets/exp-icons/github.svg";
+import ts from "../../public/assets/ts.svg";
+import js from "../../public/assets/js.svg";
+import react from "../../public/assets/react.svg";
+import node from "../../public/assets/node.svg";
+import next from "../../public/assets/next.svg";
+import graphql from "../../public/assets/graphql.svg";
+import mysql from "../../public/assets/mysql.svg";
+import psql from "../../public/assets/psql.svg";
+import github from "../../public/assets/github.svg";
 import Image from "next/future/image";
 
 const icons = [react, ts, js, node, next, graphql, psql, mysql, github];
