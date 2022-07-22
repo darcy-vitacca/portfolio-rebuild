@@ -6,6 +6,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { SideMenu } from "../components/SideMenu";
 import { AboutTextScroller } from "../components/Scroller";
+import { About } from "../components/About";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -17,10 +18,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col h-24 mx-auto md:justify-end md:flex-row bg-main-600 max-w-screen lg:text-left">
-        <div className="flex items-end justify-start w-full border-r border-white"></div>
-        <div className="min-w-[250px] flex justify-center items-center">
-          {" "}
+      <div className="flex flex-row justify-end h-24 mx-auto bg-main-600 max-w-screen lg:text-left">
+        <div className="flex items-end justify-start w-full border-r border-white">
+          <h1 className="px-4 mb-6 text-2xl text-gray-100 ">d. vitacca</h1>
+        </div>
+        <div className="min-w-[90px] md:min-w-[250px] flex justify-center items-center">
           <MenuIcon
             className="w-12 h-12 text-gray-100 cursor-pointer"
             onClick={() => setOpen(true)}
@@ -28,30 +30,33 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div>
-        <div className="flex flex-row w-full border-t border-white bg-main-600 h-96 lg:text-left">
-          <div className="flex flex-col w-full border-r border-white">
-            <h1 className="mb-6 text-gray-100 text-7xl md:text-9xl">
-              Darcy Vitacca.
-            </h1>
-            <AboutTextScroller />
+        <About />
+        <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
+          <div className="w-full min-w-0 border-r border-black">
+            <p>
+              I’m a self taught full stack developer, with a passion for
+              creating good systems in code and life.
+            </p>
           </div>
-          <div className="w-[250px] "></div>
+          <div className="min-w-[250px] "></div>
         </div>
         <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
-          <div className="flex items-end justify-start w-full border-r border-black"></div>
+          <div className="flex items-end justify-start w-full min-w-0 border-r border-black">
+            <AboutTextScroller />
+          </div>
           <div className="min-w-[250px] "></div>
         </div>
         <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
           <div className="flex items-end justify-start w-full border-r border-black"></div>
-          <div className="min-w-[250px] bg-gray-100"></div>
+          <div className="min-w-[250px] bg-stone-200"></div>
         </div>
       </div>
-      <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
+      <div className="flex justify-between mx-auto border-b border-black h-96 max-w-screen lg:text-left">
         <div className="flex items-end justify-start w-full border-r border-black"></div>
         <div className="min-w-[250px] "></div>
       </div>
-      <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
-        <div className="flex items-end justify-start w-full border-r border-black"></div>
+      <div className="flex justify-between mx-auto border-b border-black h-96 max-w-screen lg:text-left">
+        <div className="flex items-end justify-start w-full border-r border-black bg-main-600"></div>
         <div className="min-w-[250px] "></div>
       </div>
 

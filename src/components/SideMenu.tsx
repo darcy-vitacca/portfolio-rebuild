@@ -35,7 +35,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="w-screen max-w-lg pointer-events-auto ">
-                  <div className="flex flex-col h-full shadow-xl bg-slate-100">
+                  <div className="flex flex-col h-full shadow-xl bg-stone-200">
                     <div className="px-6 py-6">
                       <div className="flex items-end justify-end">
                         <div className="flex items-center ml-3 h-7">
@@ -54,7 +54,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
                       <div className="mx-6 mt-6">
                         {menuItems?.map((item) => (
                           <Link key={item.label} href={item?.href}>
-                            <div className="w-full p-2 my-3 text-6xl text-center text-white bg-black cursor-pointer">
+                            <div className="w-full p-2 my-3 text-3xl text-center text-white bg-black cursor-pointer md:text-6xl">
                               {item.label}
                             </div>
                           </Link>
