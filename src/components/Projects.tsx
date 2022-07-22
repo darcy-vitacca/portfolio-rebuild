@@ -1,10 +1,14 @@
 import Image from "next/future/image";
+import { FC } from "react";
+import { IProjectProps, projectData } from "../utils/projects";
 import { AboutTextScroller } from "./Scroller";
-import recipelab from "../../public/assets/recipelab.svg";
+import { nanoid } from 'nanoid'
+
+
 
 export const Projects = () => {
   return (
-    <>
+  <>
       <div className="flex justify-between h-24 mx-auto border-b border-black max-w-screen lg:text-left">
         <div className="flex items-end justify-start w-full border-r border-black"></div>
         <div className="min-w-[250px] bg-main-600 "></div>
@@ -21,45 +25,36 @@ export const Projects = () => {
           <div className="min-w-[250px] bg-main-600"></div>
         </div>
       </div>
-      <ProjectRow />
-      <ProjectRow />
-      <ProjectRow />
+        {projectData.map((project: [IProjectProps, IProjectProps]) => (
+        <div key={nanoid()} className="flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row ">
+          <Project  {...project[0]}/>
+          <Project  {...project[1]}/>
+          </div>
+          ))}
     </>
   );
 };
 
-export const ProjectRow = () => {
-  return (
-    <div className="flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row ">
-      <Project />
-      <Project />
-    </div>
-  );
-};
 
-export const Project = () => {
+export const Project :FC<IProjectProps> = ({img, text, tech, header}) => {
   return (
-    <div className="flex flex-col p-3 md:flex-row">
+    <div className="flex flex-col px-3 py-5 md:flex-row">
       <Image
-        src={recipelab}
+        src={img}
         alt="Recipe Lab"
-        className="cursor-pointer md:mr-3 max-w-[550px] w-full"
+        className="md:mr-3 max-w-[550px] w-full"
       />
-      <div className="w-full p-4 max-w-[550px]">
+      <div className="w-full max-w-[550px]">
+        <h1 className="mt-2 mb-2 text-2xl font-bold md:mt-0">{header}</h1>
         <p>
-          RecipeLab is a recipe sharing platform that allows anyone to share and
-          store their/others recipes online. Recipes are posted daily and can be
-          upvoted and commented and saved to your recipe book, so you never lose
-          a recipe again. You can also search through all recipes posted and
-          show/update your own profile.
+         {text}
         </p>
 
-        <p className="mt-2 italic font-bold">
-          Nodes, GraphQL, Javascript (ES6), Apollo, Sequelize, MySQL, React,
-          CSS, React context, React Hooks, AWS, EC2, Cloudfront, Route53, Google
-          Analytics, NGINX, RDS
+        <p className="mt-2 text-sm italic font-bold">
+         {tech}
         </p>
       </div>
     </div>
   );
 };
+
