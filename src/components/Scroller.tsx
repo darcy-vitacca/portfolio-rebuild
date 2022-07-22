@@ -8,11 +8,14 @@ export const AboutTextScroller = () => {
           speed={120}
           gradient={false}
           className="italic font-bold uppercase font-xl"
+          loop={0}
+          delay={0}
+          pauseOnHover
         >
           This is scrolling text. This is scrolling text. This is scrolling
           text. This is scrolling text. This is scrolling text. This is
           scrolling text. This is scrolling text. This is scrolling text. This
-          is scrolling text. 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 t. This is
+          {/* is scrolling text. 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 t. This is
           scrolling text. This is scrolling text. This is scrolling text. This
           is scrolling text. This is scrolling text. This is scrolling text.
           This is scrolling text. This is scrolling text. This is scrolling
@@ -33,7 +36,7 @@ export const AboutTextScroller = () => {
           This is scrolling text. This is scrolling text. This is scrolling
           text. This is scrolling text. This is scrolling text. This is
           scrolling text. This is scrolling text. This is scrolling text. This
-          is scrolling text.
+          is scrolling text. */}
         </Marquee>
       </div>
     </div>

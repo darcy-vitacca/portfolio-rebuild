@@ -5,9 +5,9 @@ import { DotsVerticalIcon } from "@heroicons/react/solid";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { SideMenu } from "../components/SideMenu";
-import { AboutTextScroller } from "../components/Scroller";
 import { About } from "../components/About";
 import { AboutMe } from "../components/AboutMe";
+import { Projects } from "../components/Projects";
 
 const Home: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -33,16 +33,11 @@ const Home: NextPage = () => {
       <div>
         <About />
         <AboutMe />
-        <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
-          <div className="flex items-end justify-start w-full min-w-0 border-r border-black">
-            <AboutTextScroller />
-          </div>
-          <div className="min-w-[250px] "></div>
-        </div>
-        <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
+        <Projects />
+        {/* <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
           <div className="flex items-end justify-start w-full border-r border-black"></div>
           <div className="min-w-[250px] bg-stone-200"></div>
-        </div>
+        </div> */}
       </div>
       <div className="flex justify-between mx-auto border-b border-black h-96 max-w-screen lg:text-left">
         <div className="flex items-end justify-start w-full border-r border-black"></div>

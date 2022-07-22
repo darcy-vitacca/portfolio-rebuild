@@ -11,8 +11,8 @@ interface ISideMenuProps {
 }
 
 const menuItems = [
-  { href: "#", label: "Menu Item" },
-  { href: "#", label: "Menu Item" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
   { href: "#", label: "Menu Item" },
   { href: "#", label: "Menu Item" },
 ];
@@ -54,7 +54,10 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
                       <div className="mx-6">
                         {menuItems?.map((item) => (
                           <Link key={item.label} href={item?.href}>
-                            <div className="w-full p-2 my-3 text-3xl text-center text-white bg-black cursor-pointer md:text-6xl">
+                            <div
+                              className="w-full p-2 my-3 text-3xl text-center text-white bg-black cursor-pointer md:text-6xl"
+                              onClick={() => setOpen(false)}
+                            >
                               {item.label}
                             </div>
                           </Link>
