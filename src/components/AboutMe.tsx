@@ -16,7 +16,7 @@ export const AboutMe = () => {
     <div className="flex flex-col mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left md:flex-row">
       <div className="flex flex-col justify-center w-full h-full min-w-0 border-r border-black md:justify-center ">
         <h2 className="mx-2 mt-24 text-md sm:mt-2 md:text-2xl md:w-[80%]">
-          Hi I'm Darcy! I’m a self taught full stack developer, with a passion
+          Hi I&rsquo;m Darcy! A self taught full stack developer, with a passion
           for creating good systems in code and life. I have a broad range of
           experience over many different technologies, specializing in web
           development.
