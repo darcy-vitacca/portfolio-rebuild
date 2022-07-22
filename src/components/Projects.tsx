@@ -34,7 +34,7 @@ export const Projects = () => {
     </>
   );
 };
-
+//
 
 export const Project :FC<IProjectProps> = ({img, text, tech, header}) => {
   return (
