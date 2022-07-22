@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 export const AboutTextScroller = () => {
   return (
-    <div className="scroll-container h-[45px]">
+    <div className="bg-[#A8FEB6] h-[45px] border">
       <div className="h-[30px] border-b-2 border-black ">
         <Marquee
           speed={120}

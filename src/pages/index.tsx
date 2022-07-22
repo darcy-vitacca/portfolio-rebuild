@@ -39,14 +39,7 @@ const Home: NextPage = () => {
           <div className="min-w-[250px] bg-stone-200"></div>
         </div> */}
       </div>
-      <div className="flex justify-between mx-auto border-b border-black h-96 max-w-screen lg:text-left">
-        <div className="flex items-end justify-start w-full border-r border-black"></div>
-        <div className="min-w-[250px] "></div>
-      </div>
-      <div className="flex justify-between mx-auto border-b border-black h-96 max-w-screen lg:text-left">
-        <div className="flex items-end justify-start w-full border-r border-black bg-main-600"></div>
-        <div className="min-w-[250px] "></div>
-      </div>
+     
 
       <SideMenu open={open} setOpen={setOpen} />
     </div>
