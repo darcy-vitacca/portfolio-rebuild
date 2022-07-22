@@ -21,10 +21,6 @@ export const AboutMe = () => {
           experience over many different technologies, specializing in web
           development.
         </h2>
-        {/* <h2 className="mx-2 text-lg md:mt-0 md:text-2xl">
-          I’m a self taught full stack developer, with a passion for creating
-          good systems in code and life.
-        </h2> */}
         <div className="flex flex-row flex-wrap p-2 mt-2">
           {icons.map((icon, index) => (
             <Image
