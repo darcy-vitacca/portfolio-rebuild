@@ -2,7 +2,7 @@ import recipelab from "../../public/assets/recipelab.svg";
 import ergoactive from "../../public/assets/ergoactive.svg";
 import search4me from "../../public/assets/search4me.svg";
 import tradeconnect from "../../public/assets/tradeconnect.svg";
-import twitview from "../../public/assets/twitview.svg";
+import twitview from "../../public/assets/tv.svg";
 import gdrop from "../../public/assets/gdrop.svg";
 import chatapp from "../../public/assets/chatapp.svg";
 
