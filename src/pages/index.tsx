@@ -33,11 +33,8 @@ const Home: NextPage = () => {
       <div>
         <About />
         <AboutMe />
-        <Projects />
-        {/* <div className="flex justify-between mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left">
-          <div className="flex items-end justify-start w-full border-r border-black"></div>
-          <div className="min-w-[250px] bg-stone-200"></div>
-        </div> */}
+        <Projects  header="Projects" scrollbar id="projects"/>
+        <Projects header="Work History" id="work-history" />
       </div>
      
 
