@@ -56,6 +56,7 @@ export const Project: FC<IProjectProps> = ({
 	header,
 	href,
 	repo,
+	dates,
 }) => {
 	return (
 		<div className='flex flex-col px-3 py-5 lg:flex-row '>
@@ -65,8 +66,9 @@ export const Project: FC<IProjectProps> = ({
 				className='object-cover rounded-lg md:mr-3 w-[500px] h-[500px]'
 			/>
 			<div className='w-full max-w-[550px]'>
-				<div className='flex flex-row justify-between'>
-					<h1 className='mt-2 mb-2 text-2xl font-bold md:mt-0'>{header}</h1>
+				<div className='flex flex-col justify-between mb-2'>
+					<h1 className='mt-2 text-2xl font-bold md:mt-0'>{header}</h1>
+					<p className='text-sm font-bold'>{dates}</p>
 				</div>
 				<p>{text}</p>
 
@@ -74,12 +76,24 @@ export const Project: FC<IProjectProps> = ({
 				<div className='flex flex-row w-full mt-2'>
 					{href && (
 						<LinkWrapper link={href}>
-							<Image src={newtab} alt='Website' className='w-6 h-6 mr-2' />
+							<a target='_blank' rel='noopener noreferrer'>
+								<Image
+									src={newtab}
+									alt='Website'
+									className='w-6 h-6 mr-2 cursor-pointer'
+								/>
+							</a>
 						</LinkWrapper>
 					)}
 					{repo && (
 						<LinkWrapper link={repo}>
-							<Image src={github} alt='Github' className='w-5 h-6' />
+							<a target='_blank' rel='noopener noreferrer'>
+								<Image
+									src={github}
+									alt='Github'
+									className='w-5 h-6 cursor-pointer'
+								/>
+							</a>
 						</LinkWrapper>
 					)}
 				</div>
