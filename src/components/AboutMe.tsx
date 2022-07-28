@@ -8,14 +8,27 @@ import mysql from '../../public/assets/mysql.svg';
 import psql from '../../public/assets/psql.svg';
 import html from '../../public/assets/html.svg';
 import css from '../../public/assets/css.svg';
+import prisma from '../../public/assets/prisma.svg';
 import Image from 'next/future/image';
 
-const icons = [react, ts, js, node, next, graphql, html, css, psql, mysql];
+const icons = [
+	react,
+	ts,
+	js,
+	node,
+	next,
+	graphql,
+	prisma,
+	html,
+	css,
+	psql,
+	mysql,
+];
 
 export const AboutMe = () => {
 	return (
 		<div className='flex flex-col mx-auto bg-white border-b border-black h-96 max-w-screen lg:text-left md:flex-row'>
-			<div className='flex flex-col justify-center w-full h-full min-w-0 border-r border-black md:justify-center '>
+			<div className='flex flex-col justify-center w-full h-full min-w-0 border-black md:border-r md:justify-center '>
 				<h2 className='mx-2 mt-24 text-md sm:mt-2 md:text-2xl md:w-[80%]'>
 					Hi I&rsquo;m Darcy! A self taught full stack developer, with a passion
 					for creating good systems in code and life. I have a broad range of

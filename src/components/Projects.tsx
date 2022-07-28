@@ -3,6 +3,9 @@ import { FC } from 'react';
 import { IProjectProps, projectData } from '../utils/projects';
 import { AboutTextScroller } from './Scroller';
 import { nanoid } from 'nanoid';
+import github from '../../public/assets/githubsymbol.png';
+import newtab from '../../public/assets/newtab.png';
+import Link from 'next/link';
 
 export const Projects: FC<{
 	header: string;
@@ -12,7 +15,7 @@ export const Projects: FC<{
 	return (
 		<>
 			<div className='flex justify-between h-24 mx-auto border-b border-black max-w-screen lg:text-left'>
-				<div className='flex items-end justify-start w-full border-r border-black'></div>
+				<div className='flex items-end justify-start w-full '></div>
 				{scrollbar && <div className='min-w-[250px] bg-main-600'></div>}
 			</div>
 			<div
@@ -20,7 +23,7 @@ export const Projects: FC<{
 				id={id}
 			>
 				<div
-					className={`flex flex-col w-full min-w-0 border-r border-black ${
+					className={`flex flex-col w-full min-w-0  ${
 						!scrollbar && 'justify-center'
 					}`}
 				>
@@ -31,13 +34,13 @@ export const Projects: FC<{
 					{scrollbar && <div className='min-w-[250px] bg-main-600'></div>}
 				</div>
 			</div>
-			{projectData.map((project: [IProjectProps, IProjectProps]) => (
+			{projectData.map((project: [IProjectProps, IProjectProps?]) => (
 				<div
 					key={nanoid()}
-					className='flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row '
+					className='flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row 2xl:items-start'
 				>
 					<Project {...project[0]} />
-					<Project {...project[1]} />
+					{project[1] && <Project {...project[1]} />}
 				</div>
 			))}
 		</>
@@ -45,20 +48,50 @@ export const Projects: FC<{
 };
 //
 
-export const Project: FC<IProjectProps> = ({ img, text, tech, header }) => {
+export const Project: FC<IProjectProps> = ({
+	img,
+	text,
+	tech,
+	header,
+	href,
+	repo,
+}) => {
 	return (
-		<div className='flex flex-col px-3 py-5 md:flex-row'>
+		<div className='flex flex-col px-3 py-5 lg:flex-row '>
 			<Image
 				src={img}
 				alt='Recipe Lab'
-				className='md:mr-3 max-w-[550px] w-full'
+				className='object-cover rounded-lg md:mr-3 w-[500px] h-[500px]'
 			/>
 			<div className='w-full max-w-[550px]'>
-				<h1 className='mt-2 mb-2 text-2xl font-bold md:mt-0'>{header}</h1>
+				<div className='flex flex-row justify-between'>
+					<h1 className='mt-2 mb-2 text-2xl font-bold md:mt-0'>{header}</h1>
+				</div>
 				<p>{text}</p>
 
 				<p className='mt-2 text-sm italic font-bold'>{tech}</p>
+				<div className='flex flex-row w-full mt-2'>
+					<LinkWrapper link={href}>
+						<Image src={newtab} alt='Website' className='w-6 h-6 mr-2' />
+					</LinkWrapper>
+					<LinkWrapper link={repo}>
+						<Image src={github} alt='Github' className='w-5 h-6' />
+					</LinkWrapper>
+				</div>
 			</div>
 		</div>
+	);
+};
+
+export const LinkWrapper: FC<{ link?: string; children: any }> = ({
+	link,
+	children,
+}) => {
+	return link ? (
+		<Link href={link} passHref={true}>
+			{children}
+		</Link>
+	) : (
+		children
 	);
 };

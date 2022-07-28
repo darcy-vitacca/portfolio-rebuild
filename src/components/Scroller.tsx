@@ -78,7 +78,7 @@ export const AboutTextScroller = () => {
 					NextJS • 26/2/21 - Got a job at Seventh Beam Digital Agency 🎉🎉🎉 •
 					27/2/21 - Started working on a front for AusPost creating forms using
 					typescript/react-hook-form/material-ui • 19/4/21 - Created a reusable
-					template for a Vault digital card provider to create when adding a new
+					template for Vault a digital card provider to create when adding a new
 					clients to redeem cards • 27/5/21 - Did some work on a nodeJS backend
 					for Vault a digital card provider. • 4/6/21 - Started work on a
 					project for Scotpac a finanicial services company building a complex

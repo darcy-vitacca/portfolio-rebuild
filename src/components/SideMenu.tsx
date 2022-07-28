@@ -66,7 +66,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
 													</Link>
 												))}
 											</div>
-											<div className='flex justify-end mx-6 mt-12'>
+											<div className='flex justify-end mx-6 mt-16'>
 												<Link
 													href='https://www.linkedin.com/in/darcy-vitacca/'
 													passHref={true}
@@ -74,7 +74,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
 													<Image
 														src={linkedin}
 														alt='linkedin'
-														className='w-8 h-8 mr-6 cursor-pointer'
+														className='w-8 h-8 mr-8 cursor-pointer'
 													/>
 												</Link>
 												<Link
@@ -84,7 +84,7 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
 													<Image
 														src={github}
 														alt='github'
-														className='w-8 h-8 mr-6 cursor-pointer '
+														className='w-8 h-8 mr-8 cursor-pointer '
 													/>
 												</Link>
 
