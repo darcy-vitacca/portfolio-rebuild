@@ -4,11 +4,11 @@ import linkedin from '../../public/assets/linkedin-white.svg';
 import Image from 'next/future/image';
 import Link from 'next/link';
 
+//
 export const About = () => (
 	<div
 		className='relative flex flex-col w-full border-t border-white md:flex-row bg-main-600 h-96 lg:text-left '
-		id='about'
-	>
+		id='about'>
 		<div className='flex flex-col justify-center w-full min-w-0 border-white md:border-r '>
 			<h1 className='px-2 pt-2 mb-6 text-5xl text-gray-100 xl:text-8xl w-[90%] md:pt-0'>
 				Full Stack Web Developer
