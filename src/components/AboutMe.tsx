@@ -41,7 +41,7 @@ export const AboutMe = () => {
 							src={icon}
 							key={icon}
 							alt='Headshot'
-							className='w-10 h-10 pr-1 mr-1 cursor-pointer lg:w-14 lg:h-14 md:mr-3'
+							className='w-10 h-10 pr-1 mr-1 cursor-pointer lg:w-14 lg:h-14 md:mr-3 '
 						/>
 					))}
 				</div>

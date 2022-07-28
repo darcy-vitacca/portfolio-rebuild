@@ -1,6 +1,6 @@
 import Image from 'next/future/image';
 import { FC } from 'react';
-import { IProjectProps, projectData } from '../utils/projects';
+import { IProjectProps } from '../utils/projects';
 import { AboutTextScroller } from './Scroller';
 import { nanoid } from 'nanoid';
 import github from '../../public/assets/githubsymbol.png';
@@ -11,7 +11,8 @@ export const Projects: FC<{
 	header: string;
 	scrollbar?: boolean;
 	id: string;
-}> = ({ header, scrollbar, id }) => {
+	projectData: [IProjectProps, IProjectProps?][];
+}> = ({ header, scrollbar, id, projectData }) => {
 	return (
 		<>
 			<div className='flex justify-between h-24 mx-auto border-b border-black max-w-screen lg:text-left'>
@@ -34,7 +35,7 @@ export const Projects: FC<{
 					{scrollbar && <div className='min-w-[250px] bg-main-600'></div>}
 				</div>
 			</div>
-			{projectData.map((project: [IProjectProps, IProjectProps?]) => (
+			{projectData?.map((project: [IProjectProps, IProjectProps?]) => (
 				<div
 					key={nanoid()}
 					className='flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row 2xl:items-start'
@@ -71,12 +72,16 @@ export const Project: FC<IProjectProps> = ({
 
 				<p className='mt-2 text-sm italic font-bold'>{tech}</p>
 				<div className='flex flex-row w-full mt-2'>
-					<LinkWrapper link={href}>
-						<Image src={newtab} alt='Website' className='w-6 h-6 mr-2' />
-					</LinkWrapper>
-					<LinkWrapper link={repo}>
-						<Image src={github} alt='Github' className='w-5 h-6' />
-					</LinkWrapper>
+					{href && (
+						<LinkWrapper link={href}>
+							<Image src={newtab} alt='Website' className='w-6 h-6 mr-2' />
+						</LinkWrapper>
+					)}
+					{repo && (
+						<LinkWrapper link={repo}>
+							<Image src={github} alt='Github' className='w-5 h-6' />
+						</LinkWrapper>
+					)}
 				</div>
 			</div>
 		</div>

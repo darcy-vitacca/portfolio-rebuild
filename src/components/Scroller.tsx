@@ -16,7 +16,7 @@ export const AboutTextScroller = () => {
 					• 16/2/20 - Decided I wanted a career change from being eletrician,
 					searched reddit on steps to become and software engineer. • 17/2/20 -
 					Joined Free Code Camp and underetook the responsive web design
-					certificate with 0 experience coding{' '}
+					certificate with 0 experience coding
 					<Link
 						href='https://codepen.io/darcy-vitacca/pen/bGdpvBQ'
 						passHref={true}
@@ -89,7 +89,6 @@ export const AboutTextScroller = () => {
 					documentation accordingly. • 16/2/22 - Started working on a fantasy
 					horse racing app for Group 1 Sports in Flutter • 9/5/22 - Started
 					leading a rebuild for the ESPN footytips website frontend • 25/5/22 -
-					Started work on an update to the Scotpac Broker Portal • 25/5/22 -
 					Started work on an update to the Scotpac Broker Portal
 				</Marquee>
 			</div>
