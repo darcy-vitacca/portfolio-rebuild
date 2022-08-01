@@ -71,32 +71,38 @@ export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {
 													href='https://www.linkedin.com/in/darcy-vitacca/'
 													passHref={true}
 												>
-													<Image
-														src={linkedin}
-														alt='linkedin'
-														className='w-8 h-8 mr-8 cursor-pointer'
-													/>
+													<a target='_blank' rel='noopener noreferrer'>
+														<Image
+															src={linkedin}
+															alt='linkedin'
+															className='w-8 h-8 mr-8 cursor-pointer'
+														/>
+													</a>
 												</Link>
 												<Link
 													href='https://github.com/darcy-vitacca/'
 													passHref={true}
 												>
-													<Image
-														src={github}
-														alt='github'
-														className='w-8 h-8 mr-8 cursor-pointer '
-													/>
+													<a target='_blank' rel='noopener noreferrer'>
+														<Image
+															src={github}
+															alt='github'
+															className='w-8 h-8 mr-8 cursor-pointer '
+														/>
+													</a>
 												</Link>
 
 												<Link
 													href='https://twitter.com/darcyio_'
 													passHref={true}
 												>
-													<Image
-														src={twtr}
-														alt='twtr'
-														className='w-8 h-8 cursor-pointer fill-blue-500'
-													/>
+													<a target='_blank' rel='noopener noreferrer'>
+														<Image
+															src={twtr}
+															alt='twtr'
+															className='w-8 h-8 cursor-pointer fill-blue-500'
+														/>
+													</a>
 												</Link>
 											</div>
 										</div>
