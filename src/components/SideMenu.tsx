@@ -18,6 +18,7 @@ const menuItems = [
 	{ href: '#about', label: 'About' },
 	{ href: '#projects', label: 'Projects' },
 	{ href: '#work-history', label: 'Work History' },
+	{ href: 'blog', label: 'Blog' },
 ];
 
 export const SideMenu: FC<ISideMenuProps> = ({ open, setOpen }) => {

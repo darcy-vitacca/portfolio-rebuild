@@ -2,7 +2,7 @@ import Image from 'next/future/image';
 import { FC } from 'react';
 import { IProjectProps } from '../utils/projects';
 import { AboutTextScroller } from './Scroller';
-import { nanoid } from 'nanoid';
+import { v4 as uuid } from 'uuid';
 import github from '../../public/assets/githubsymbol.png';
 import newtab from '../../public/assets/newtab.png';
 import Link from 'next/link';
@@ -37,7 +37,7 @@ export const Projects: FC<{
 			</div>
 			{projectData?.map((project: [IProjectProps, IProjectProps?]) => (
 				<div
-					key={nanoid()}
+					key={uuid()}
 					className='flex flex-col items-center justify-center w-full p-4 py-6 2xl:flex-row 2xl:items-start'
 				>
 					<Project {...project[0]} />
@@ -62,7 +62,7 @@ export const Project: FC<IProjectProps> = ({
 		<div className='flex flex-col px-3 py-5 lg:flex-row '>
 			<Image
 				src={img}
-				alt='Recipe Lab'
+				alt='Project Image'
 				className='object-cover rounded-lg md:mr-3 w-[500px] h-[500px]'
 			/>
 			<div className='w-full max-w-[550px]'>

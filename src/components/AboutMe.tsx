@@ -10,6 +10,7 @@ import html from '../../public/assets/html.svg';
 import css from '../../public/assets/css.svg';
 import prisma from '../../public/assets/prisma.svg';
 import Image from 'next/future/image';
+import { v4 as uuid } from 'uuid';
 
 const icons = [
 	react,
@@ -36,11 +37,11 @@ export const AboutMe = () => {
 					development.
 				</h2>
 				<div className='flex flex-row flex-wrap p-2 mt-2'>
-					{icons.map((icon, index) => (
+					{icons.map((icon) => (
 						<Image
 							src={icon}
-							key={icon}
-							alt='Headshot'
+							key={uuid()}
+							alt='Experience Icon Technology'
 							className='w-10 h-10 pr-1 mr-1 cursor-pointer lg:w-14 lg:h-14 md:mr-3 '
 						/>
 					))}

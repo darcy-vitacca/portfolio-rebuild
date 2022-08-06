@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    html {
-        font-family: monospace,  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
-  }
+	html {
+		font-family: monospace, ui-sans-serif, system-ui, -apple-system,
+			BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+			'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+			'Segoe UI Symbol', 'Noto Color Emoji';
+	}
+}
 
 /* .scroll-container {
 background-color: #A8FEB6;
@@ -18,3 +20,25 @@ min-width: 0
 
 } */
 
+.bold {
+	font-weight: bold;
+}
+
+.code {
+	font-family: monospace;
+	background-color: rgb(242, 242, 242);
+	padding: 2px 4px;
+	border-radius: 2px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+.underline {
+	text-decoration: underline;
+}
